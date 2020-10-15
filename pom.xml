@@ -33,13 +33,6 @@
 
     </dependencies>
 
-    <!--    <repositories>
-        <repository>
-            <id>spring-maven-milestone</id>
-            <name>Spring Maven Milestone Repository</name>
-            <url>http://maven.springframework.org/milestone</url>
-        </repository>
-    </repositories>-->
     <repositories>
         <repository>
             <id>spring-releases</id>
