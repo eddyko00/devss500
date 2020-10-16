@@ -8,7 +8,7 @@
     <version>0.0.1-SNAPSHOT</version>
     <packaging>jar</packaging>
 
-    <name>devssns</name>
+    <name>devssns UI 500</name>
     <description>Demo project for Spring Boot</description>
 
     <parent>
