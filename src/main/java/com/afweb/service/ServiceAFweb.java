@@ -163,12 +163,6 @@ public class ServiceAFweb {
             }
             return getServerObj().getTimerCnt();
         }
-        //////////////////////////
-        //no action
-        //////////////////////////
-        if (true) {
-            return getServerObj().getTimerCnt();
-        }
 
         if (getServerObj().getTimerCnt() < 0) {
             serverObj.setTimerCnt(0);
