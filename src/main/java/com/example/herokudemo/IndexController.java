@@ -13,6 +13,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import org.springframework.http.MediaType;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -26,10 +27,23 @@ import org.springframework.web.servlet.ModelAndView;
 
 //https://www.baeldung.com/spring-cors
 @CrossOrigin(origins = "*", allowedHeaders = "*")
-@RestController
+@Controller
 public class IndexController {
 
     private static AFwebService afWebService = new AFwebService();
+
+    @RequestMapping("/web")
+    @ResponseBody
+    public String welcome() {
+        return "index";
+    }
+
+    @RequestMapping("/web1")
+    public ModelAndView index1() {
+        ModelAndView modelAndView = new ModelAndView();
+        modelAndView.setViewName("index");
+        return modelAndView;
+    }
 
     @GetMapping("/")
     public String index() {
@@ -91,7 +105,7 @@ public class IndexController {
         arrayString.add("/cust/{username}/id/{id}/serv/wifi/summary?length={0 for all}");
         arrayString.add("/cust/{username}/id/{id}/serv/wifi/id/{pid}");
         arrayString.add("/cust/{username}/id/{id}/serv/wifi/id/{pid}/rt/getdevices");
-        arrayString.add("/cust/{username}/id/{id}/serv/wifi/id/{pid}/rt/getdeviceshdml");          
+        arrayString.add("/cust/{username}/id/{id}/serv/wifi/id/{pid}/rt/getdeviceshdml");
         arrayString.add("/cust/{username}/id/{id}/serv/wifi/id/{pid}/rt/getdevicestatus");
         arrayString.add("/cust/{username}/id/{id}/serv/wifi/id/{pid}/rttest/getdevicestatus");
         arrayString.add("/cust/{username}/id/{id}/serv/wifi/featureall");
@@ -126,6 +140,7 @@ public class IndexController {
 
         return arrayString;
     }
+
     @RequestMapping(value = "/server/mysqldb", method = RequestMethod.GET, produces = {MediaType.APPLICATION_JSON_VALUE})
     public @ResponseBody
     String getServerLocalDbURL() {

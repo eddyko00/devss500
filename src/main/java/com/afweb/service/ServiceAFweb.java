@@ -113,11 +113,6 @@ public class ServiceAFweb {
     public void initDataSource() {
         logger.info(">initDataSource ");
         //testing
-        WebAppConfig webConfig = new WebAppConfig();
-        dataSource = webConfig.dataSource();
-        //testing        
-        this.jdbcTemplate = new JdbcTemplate(dataSource);
-        this.dataSource = dataSource;
 
         String enSt = CKey.URL_PRODUCT_TMP;
         enSt = replaceAll("abc", "", enSt);
