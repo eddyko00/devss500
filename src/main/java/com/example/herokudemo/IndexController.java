@@ -26,8 +26,8 @@ import org.springframework.web.servlet.ModelAndView;
 
 //https://www.baeldung.com/spring-cors
 @CrossOrigin(origins = "*", allowedHeaders = "*")
-//@RestController
-@Controller
+@RestController
+//@Controller
 public class IndexController {
 
     private static AFwebService afWebService = new AFwebService();
@@ -39,6 +39,11 @@ public class IndexController {
         return modelAndView;
     }
 
+    @RequestMapping("/webindex")
+    public String webindex() {
+        return "index";
+    }
+    
     @GetMapping("/")
     public String index() {
         return "Hello there! I'm running v1.1";
