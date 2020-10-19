@@ -12,6 +12,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import org.springframework.http.MediaType;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -25,10 +26,18 @@ import org.springframework.web.servlet.ModelAndView;
 
 //https://www.baeldung.com/spring-cors
 @CrossOrigin(origins = "*", allowedHeaders = "*")
-@RestController
+//@RestController
+@Controller
 public class IndexController {
 
     private static AFwebService afWebService = new AFwebService();
+
+    @RequestMapping("/web")
+    public ModelAndView index1() {
+        ModelAndView modelAndView = new ModelAndView();
+        modelAndView.setViewName("index");
+        return modelAndView;
+    }
 
     @GetMapping("/")
     public String index() {
@@ -108,6 +117,7 @@ public class IndexController {
         }
         return null;
     }
+
     @RequestMapping(value = "/cust/{username}/sys/backupall", method = RequestMethod.GET, produces = {MediaType.APPLICATION_JSON_VALUE})
     public @ResponseBody
     WebStatus SystemBackupacc(@PathVariable("username") String username) {
@@ -124,8 +134,6 @@ public class IndexController {
 
         return null;
     }
-
-
 
     @RequestMapping(value = "/cust/{username}/sys/reopenssnsdata", method = RequestMethod.GET, produces = {MediaType.APPLICATION_JSON_VALUE})
     public @ResponseBody
@@ -199,7 +207,6 @@ public class IndexController {
         }
         return null;
     }
-
 
     @RequestMapping(value = "/cust/{username}/sys/request", method = RequestMethod.POST, produces = {MediaType.APPLICATION_JSON_VALUE})
     public @ResponseBody
