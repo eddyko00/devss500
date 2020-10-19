@@ -10,6 +10,7 @@ import java.nio.file.Paths;
 import java.util.ArrayList;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import org.springframework.context.annotation.ComponentScan;
 
 import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
@@ -28,6 +29,7 @@ import org.springframework.web.servlet.ModelAndView;
 @CrossOrigin(origins = "*", allowedHeaders = "*")
 @RestController
 //@Controller
+@ComponentScan(basePackages= {"com.example.herokudemo"})
 public class IndexController {
 
     private static AFwebService afWebService = new AFwebService();

@@ -39,7 +39,7 @@ public class HerokuDemoApplication {
         }
 
         try {
-            restTimer.RestTimerHandler();
+//            restTimer.RestTimerHandler();
             TimeUnit.SECONDS.sleep(1);
 
         } catch (Exception ex) {
