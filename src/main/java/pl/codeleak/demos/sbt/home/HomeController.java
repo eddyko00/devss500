@@ -10,7 +10,7 @@ import java.time.LocalDateTime;
 @Controller
 class HomeController {
 
-    @GetMapping("/")
+    @GetMapping("/web")
     String index(Model model) {
         model.addAttribute("now", LocalDateTime.now());
         return "index";
