@@ -6,8 +6,8 @@
     <artifactId>spring-boot-thymeleaf</artifactId>
     <version>1.0.0-SNAPSHOT</version>
     <name>spring-boot-thymeleaf</name>
-    <packaging>war</packaging>
-
+    <!--<packaging>war</packaging>-->
+    <packaging>jar</packaging>
     <!-- Inherit defaults from Spring Boot -->
     <!-- With this starter it is easier to override versions of libraries -->
     <parent>
@@ -104,14 +104,14 @@
         </dependency>
         <!-- Provided (for embedded war support) -->
         <dependency>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-tomcat</artifactId>
-        <scope>provided</scope>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-tomcat</artifactId>
+            <scope>provided</scope>
         </dependency>
     </dependencies>
 
     <!-- Package as an executable jar -->
-<!--    <build>
+    <!--    <build>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
