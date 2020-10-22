@@ -11,9 +11,13 @@ import java.time.LocalDateTime;
 class HomeController {
 
     @GetMapping("/")
-    String index(Model model) {
+    String index0(Model model) {
         return "index";
     }
+    @GetMapping("/index.html")
+    String index(Model model) {
+        return "index";
+    }    
     @GetMapping("/account")
     String account(Model model) {
         return "account";
