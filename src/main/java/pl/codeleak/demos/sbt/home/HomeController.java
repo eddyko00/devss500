@@ -19,7 +19,7 @@ class HomeController {
     @GetMapping("/web")
     String index1(Model model) {
         model.addAttribute("now", LocalDateTime.now());
-        return "index";
+        return "index1";
     }
 
     @GetMapping("properties")
