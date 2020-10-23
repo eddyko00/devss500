@@ -14,9 +14,9 @@ class HomeController {
     String index0(Model model) {
         return "index";
     }
-    @GetMapping("/index.html")
+    @GetMapping("/web")
     String index(Model model) {
-        return "index";
+        return "index_1";
     }    
     @GetMapping("/account")
     String account(Model model) {
