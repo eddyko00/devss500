@@ -12,13 +12,18 @@ class HomeController {
 
     @GetMapping("/")
     String index(Model model) {
-        model.addAttribute("now", LocalDateTime.now());
-        return "index_web";
+
+        return "index";
+    }
+    @GetMapping("/index.html")
+    String indexindex(Model model) {
+
+        return "index";
     }
 
     @GetMapping("/web")
     String index1(Model model) {
-        model.addAttribute("now", LocalDateTime.now());
+
         return "index_web";
     }
     @GetMapping("/account")
