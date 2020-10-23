@@ -6,8 +6,8 @@
     <artifactId>spring-boot-thymeleaf</artifactId>
     <version>1.0.0-SNAPSHOT</version>
     <name>spring-boot-thymeleaf</name>
-    <packaging>war</packaging>
-    <!--<packaging>jar</packaging>-->
+    <!--<packaging>war</packaging>-->
+    <packaging>jar</packaging>
     <!-- Inherit defaults from Spring Boot -->
     <!-- With this starter it is easier to override versions of libraries -->
     <parent>
