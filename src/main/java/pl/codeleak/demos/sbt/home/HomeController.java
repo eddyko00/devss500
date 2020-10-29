@@ -89,6 +89,14 @@ class HomeController {
     @GetMapping("/monservfeattestres_1")
     String monservfeattestres_1(Model model) {
          return "monservfeattestres_1";
+    }    
+    @GetMapping("/monservbatch")
+    String monservbatch(Model model) {
+         return "monservbatch";
+    }
+    @GetMapping("/monservbatch_1")
+    String monservbatch_1(Model model) {
+         return "monservbatch_1";
     }
     @GetMapping("/reganalyize")
     String reganalyize(Model model) {
@@ -130,6 +138,7 @@ class HomeController {
     String splunkservfeat_1(Model model) {
          return "splunkservfeat_1";
     }
+ 
 //////////////////////////////////////
     @GetMapping("properties")
     @ResponseBody
